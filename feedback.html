@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback | SONVI NGO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* HERO */
+.hero{
+    height:45vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1559027615-cd4628902d4a");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+/* FORM CONTAINER */
+.container{
+    max-width:700px;
+    margin:-80px auto 80px auto;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    position:relative;
+}
+
+/* FORM TITLE */
+.container h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#004e92;
+}
+
+/* INPUT FIELDS */
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:600;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:14px;
+    transition:0.3s;
+}
+
+input:focus, select:focus, textarea:focus{
+    border-color:#004e92;
+    outline:none;
+    box-shadow:0 0 8px rgba(0,78,146,0.2);
+}
+
+/* STAR RATING */
+.rating{
+    display:flex;
+    gap:10px;
+    font-size:22px;
+    cursor:pointer;
+    color:#ccc;
+}
+
+.rating i:hover,
+.rating i.active{
+    color:#ff6600;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:14px;
+    background:linear-gradient(135deg,#004e92,#000428);
+    color:white;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:linear-gradient(135deg,#ff6600,#ff3300);
+}
+
+/* SUCCESS MESSAGE */
+.success{
+    display:none;
+    text-align:center;
+    margin-top:20px;
+    color:green;
+    font-weight:600;
+}
+
+/* FOOTER */
+footer{
+    background:#000428;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:28px;
+    }
+    .container{
+        margin:-50px 20px 50px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Your Feedback Matters 💬</h1>
+</section>
+
+<!-- FEEDBACK FORM -->
+<div class="container">
+    <h2>Share Your Experience</h2>
+
+    <form id="feedbackForm" onsubmit="submitFeedback(event)">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Service Category</label>
+            <select required>
+                <option value="">Select Service</option>
+                <option>Organ Donation</option>
+                <option>Education Support</option>
+                <option>Vruddhashram Care</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Rate Your Experience</label>
+            <div class="rating" id="rating">
+                <i class="fas fa-star" data-value="1"></i>
+                <i class="fas fa-star" data-value="2"></i>
+                <i class="fas fa-star" data-value="3"></i>
+                <i class="fas fa-star" data-value="4"></i>
+                <i class="fas fa-star" data-value="5"></i>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Your Feedback</label>
+            <textarea rows="4" required placeholder="Write your feedback here..."></textarea>
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+
+        <div class="success" id="successMsg">
+            ✅ Thank you for your valuable feedback!
+        </div>
+
+    </form>
+</div>
+
+<footer>
+    © 2026 SONVI NGO | Together We Care
+</footer>
+
+<script>
+
+// Star Rating
+const stars = document.querySelectorAll("#rating i");
+let selectedRating = 0;
+
+stars.forEach(star => {
+    star.addEventListener("click", () => {
+        selectedRating = star.getAttribute("data-value");
+        stars.forEach(s => s.classList.remove("active"));
+        for(let i = 0; i < selectedRating; i++){
+            stars[i].classList.add("active");
+        }
+    });
+});
+
+// Submit
+function submitFeedback(event){
+    event.preventDefault();
+    document.getElementById("successMsg").style.display = "block";
+    document.getElementById("feedbackForm").reset();
+    stars.forEach(s => s.classList.remove("active"));
+}
+
+</script>
+
+</body>
+</html>

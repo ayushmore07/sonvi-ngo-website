@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education Support Form</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat', sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  padding:20px;
+}
+
+/* Main Layout */
+.wrapper{
+  display:flex;
+  width:100%;
+  max-width:1000px;
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 25px 60px rgba(0,0,0,0.4);
+}
+
+/* Left Image Section */
+.image-section{
+  flex:1;
+  background:url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+  position:relative;
+}
+
+.image-section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+}
+
+.image-text{
+  position:absolute;
+  bottom:40px;
+  left:30px;
+  color:white;
+  z-index:2;
+}
+
+.image-text h2{
+  font-size:28px;
+  margin-bottom:10px;
+}
+
+.image-text p{
+  font-size:14px;
+  width:80%;
+}
+
+/* Form Section */
+.form-section{
+  flex:1;
+  padding:40px;
+  background:#ffffff;
+}
+
+.form-section h1{
+  text-align:center;
+  margin-bottom:25px;
+  color:#2c3e50;
+}
+
+label{
+  font-size:14px;
+  font-weight:600;
+  margin-top:15px;
+  display:block;
+  color:#333;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin-top:6px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  transition:0.3s;
+}
+
+input:focus{
+  border-color:#2c5364;
+  outline:none;
+  box-shadow:0 0 8px rgba(44,83,100,0.3);
+}
+
+.radio-group{
+  margin-top:20px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.radio-group label{
+  font-weight:500;
+  cursor:pointer;
+}
+
+.section-box{
+  margin-top:15px;
+  padding:15px;
+  border-radius:10px;
+  background:#f5f9fc;
+  display:none;
+}
+
+button{
+  border:none;
+  padding:10px 15px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.small-btn{
+  margin-top:10px;
+  background:#2c5364;
+  color:white;
+}
+
+.small-btn:hover{
+  background:#203a43;
+}
+
+.submit-btn{
+  width:100%;
+  margin-top:20px;
+  background:linear-gradient(to right,#0f2027,#2c5364);
+  color:white;
+}
+
+.submit-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+#address{
+  margin-top:10px;
+  background:#e3f2fd;
+  padding:10px;
+  border-radius:8px;
+  font-size:13px;
+}
+
+#message{
+  text-align:center;
+  margin-top:15px;
+  font-weight:600;
+  color:green;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .wrapper{
+    flex-direction:column;
+  }
+  .image-section{
+    height:250px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- Image Side -->
+  <div class="image-section">
+    <div class="image-text">
+      <h2>Support a Child’s Future</h2>
+      <p>Your contribution helps children receive quality education and build a brighter tomorrow.</p>
+    </div>
+  </div>
+
+  <!-- Form Side -->
+  <div class="form-section">
+    <h1>Education Support Form</h1>
+
+    <label>Full Name</label>
+    <input type="text" placeholder="Enter your name">
+
+    <label>Age</label>
+    <input type="number" placeholder="Enter your age">
+
+    <label>Address</label>
+    <input type="text" placeholder="Enter your address">
+
+    <label>Contact Number</label>
+    <input type="text" placeholder="Enter contact number">
+
+    <div class="radio-group">
+      <label><input type="radio" name="donateType" onclick="showAmount()"> Donate Amount</label>
+      <label><input type="radio" name="donateType" onclick="showMaterial()"> Donate Material</label>
+    </div>
+
+    <!-- Amount Section -->
+    <div id="amountSection" class="section-box">
+      <label>Donation Amount (₹)</label>
+      <input type="number" placeholder="Enter amount">
+      <button class="small-btn" onclick="paymentDone()">GPay</button>
+      <button class="small-btn" onclick="paymentDone()">Card</button>
+    </div>
+
+    <!-- Material Section -->
+    <div id="materialSection" class="section-box">
+      <label>Material Quantity</label>
+      <input type="number" placeholder="Enter quantity">
+      <button class="small-btn" onclick="showAddress()">Visit Location</button>
+      <p id="address" style="display:none;">
+        📍 ABC Education NGO, Pune – 411001
+      </p>
+    </div>
+
+    <button class="submit-btn" onclick="submitForm()">Submit Support</button>
+
+    <p id="message"></p>
+
+  </div>
+
+</div>
+
+<script src="educationform.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SONVI NGO | Together We Care</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f5f7fa;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,0.05);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#004e92;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ff6600;
+}
+
+/* HERO SECTION */
+.hero{
+    height:90vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.hero-content a{
+    padding:12px 30px;
+    background:#ff6600;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.hero-content a:hover{
+    background:#ff3300;
+}
+
+/* ABOUT SECTION */
+.about{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.about h2{
+    font-size:32px;
+    color:#004e92;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    color:#555;
+}
+
+/* SERVICES */
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:60px 8%;
+}
+
+.card{
+    background:white;
+    width:320px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:25px;
+    text-align:center;
+}
+
+.card-content h3{
+    color:#004e92;
+    margin-bottom:15px;
+}
+
+.card-content p{
+    font-size:15px;
+    margin-bottom:20px;
+    color:#555;
+}
+
+.card-content a{
+    text-decoration:none;
+    padding:8px 20px;
+    background:#004e92;
+    color:white;
+    border-radius:25px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.card-content a:hover{
+    background:#ff6600;
+}
+
+/* CALL TO ACTION */
+.cta{
+    background:linear-gradient(135deg,#004e92,#000428);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.cta h2{
+    margin-bottom:20px;
+    font-size:30px;
+}
+
+.cta a{
+    padding:12px 30px;
+    background:#ff6600;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.cta a:hover{
+    background:#ff3300;
+}
+
+/* FOOTER */
+footer{
+    background:#000428;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero-content h1{
+        font-size:30px;
+    }
+
+    nav ul{
+        display:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">SONVI NGO</div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Together We Can Change Lives</h1>
+        <p>Organ Donation • Education Support • Vruddhashram Care</p>
+        <a href="volunteer.html">Join Us</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>Who We Are</h2>
+    <p>
+        SONVI NGO is committed to creating positive change through organ donation awareness,
+        quality education support, and compassionate care for elderly citizens.
+        We believe humanity grows stronger when we stand together.
+    </p>
+</section>
+
+<!-- SERVICES -->
+<section class="cards">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+        <div class="card-content">
+            <h3>Organ Donation</h3>
+            <p>Saving lives through awareness and commitment to organ donation.</p>
+            <a href="organ.html">Learn More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350">
+        <div class="card-content">
+            <h3>Education Support</h3>
+            <p>Empowering children with quality education and mentorship programs.</p>
+            <a href="education.html">Learn More</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289">
+        <div class="card-content">
+            <h3>Vruddhashram Care</h3>
+            <p>Providing dignity, shelter and emotional support to elderly citizens.</p>
+            <a href="vruddhashram.html">Learn More</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Be The Reason Someone Smiles Today</h2>
+    <a href="volunteer.html">Become a Volunteer</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 SONVI NGO | All Rights Reserved
+</footer>
+
+</body>
+</html>

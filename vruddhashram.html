@@ -1,0 +1,308 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Vruddhashram Registration</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #8360c3, #2ebf91);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2ebf91;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #249c76;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>Vruddhashram Form</h2>
+    <form>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="text" id="guardian" placeholder="Guardian Name" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+        <input type="date" id="date" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="oldageform.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vruddhashram Support | SONVI NGO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f4f7fc;
+    color:#333;
+}
+
+/* HERO SECTION */
+.hero{
+    height:60vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1581578731548-c64695cc6952");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+/* SECTION CARD */
+.section{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom:40px;
+}
+
+.section h2{
+    color:#800000;
+    margin-bottom:15px;
+}
+
+.section p{
+    line-height:1.8;
+    color:#555;
+}
+
+.section ul{
+    margin-top:10px;
+    padding-left:20px;
+}
+
+.section ul li{
+    margin-bottom:10px;
+    line-height:1.6;
+}
+
+/* IMAGE GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.gallery img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.4s;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+/* CTA SECTION */
+.cta{
+    background:linear-gradient(135deg,#800000,#4d0000);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+    border-radius:20px;
+    margin-top:60px;
+}
+
+.cta h2{
+    margin-bottom:20px;
+}
+
+.cta p{
+    margin-bottom:30px;
+}
+
+.cta button{
+    padding:15px 35px;
+    font-size:16px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#800000;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.cta button:hover{
+    background:#ffdede;
+}
+
+/* FOOTER */
+footer{
+    background:#4d0000;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:60px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h1{
+        font-size:28px;
+    }
+    .section{
+        padding:25px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Support Our Vruddhashram</h1>
+        <p>Bring Comfort, Dignity & Care to Senior Citizens</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <div class="section">
+        <h2>🏠 What is a Vruddhashram?</h2>
+        <p>
+            A Vruddhashram (Old Age Home) provides shelter, care, and emotional support 
+            to elderly individuals who are abandoned, neglected, or unable to live with their families.
+            We ensure they live with dignity, safety, and respect.
+        </p>
+    </div>
+
+    <!-- IMPORTANCE -->
+    <div class="section">
+        <h2>🌿 Why It Is Important</h2>
+        <ul>
+            <li>Many elderly individuals live alone and need emotional & physical support.</li>
+            <li>Provides safe housing with proper healthcare.</li>
+            <li>Ensures dignity, peace, and respect in later years.</li>
+        </ul>
+    </div>
+
+    <!-- FACILITIES -->
+    <div class="section">
+        <h2>🩺 Facilities We Provide</h2>
+        <ul>
+            <li>Safe accommodation & nutritious meals</li>
+            <li>Regular medical check-ups & healthcare support</li>
+            <li>Emotional companionship & counseling</li>
+            <li>Yoga, games, spiritual & recreational activities</li>
+            <li>Clean, peaceful & hygienic environment</li>
+        </ul>
+    </div>
+
+    <!-- HOW TO HELP -->
+    <div class="section">
+        <h2>🤝 How You Can Help</h2>
+        <p>
+            You can support our Vruddhashram by donating food, clothes, medicines, 
+            or providing financial assistance. Even a small contribution 
+            can bring happiness and comfort to our respected elders.
+        </p>
+    </div>
+
+    <!-- IMAGE GALLERY -->
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f" alt="Elderly Care">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80" alt="Senior Citizens Activity">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac" alt="Helping Elderly">
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+        <h2>Make a Difference Today</h2>
+        <p>Your kindness can bring smiles and comfort to those who need it most.</p>
+        <button onclick="window.location.href='oldageform.html'">
+            Contribute / Donate
+        </button>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 SONVI NGO | Caring for Our Elders with Compassion
+</footer>
+
+</body>
+</html>

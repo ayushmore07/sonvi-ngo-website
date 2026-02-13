@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volunteer Registration | SONVI NGO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px 0;
+}
+
+/* FORM CONTAINER */
+.form-box{
+    width:480px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+    color:white;
+}
+
+/* TITLE */
+.form-box h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-weight:600;
+}
+
+/* LABELS */
+label{
+    display:block;
+    margin-top:12px;
+    font-size:14px;
+}
+
+/* INPUTS */
+input, textarea, select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:none;
+    border-radius:8px;
+    outline:none;
+    font-size:14px;
+}
+
+input:focus, textarea:focus, select:focus{
+    box-shadow:0 0 8px #ff6600;
+}
+
+/* RADIO GROUP */
+.gender{
+    display:flex;
+    gap:15px;
+    margin-top:5px;
+    font-size:14px;
+}
+
+/* CHECKBOX */
+.checkbox{
+    margin-top:15px;
+    font-size:13px;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border:none;
+    border-radius:25px;
+    background:linear-gradient(135deg,#ff6600,#ff3300);
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* THANK YOU MESSAGE */
+.thankyou{
+    text-align:center;
+    display:none;
+    font-size:18px;
+    margin-top:20px;
+    animation:fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* RESPONSIVE */
+@media(max-width:520px){
+    .form-box{
+        width:90%;
+        padding:25px;
+    }
+}
+
+</style>
+
+<script>
+function submitForm(){
+    document.getElementById("form").style.display="none";
+    document.getElementById("msg").style.display="block";
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="form-box">
+
+    <h2>Volunteer Registration</h2>
+
+    <form id="form" onsubmit="submitForm(); return false;">
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Email Address</label>
+        <input type="email" required>
+
+        <label>Age</label>
+        <input type="number" required>
+
+        <label>Contact Number</label>
+        <input type="tel" required>
+
+        <label>Address</label>
+        <textarea required></textarea>
+
+        <label>Gender</label>
+        <div class="gender">
+            <label><input type="radio" name="gender" required> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+            <label><input type="radio" name="gender"> Other</label>
+        </div>
+
+        <label>Why do you want to join our NGO?</label>
+        <textarea rows="2" required></textarea>
+
+        <label>Area of Interest</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Organ Donation</option>
+            <option>Education Support</option>
+            <option>Vruddhashram Care</option>
+        </select>
+
+        <label>Previous Volunteering Experience</label>
+        <textarea rows="2" placeholder="Describe if any"></textarea>
+
+        <label>Medical Conditions / Special Needs</label>
+        <textarea rows="2" placeholder="Mention if any"></textarea>
+
+        <label>Emergency Contact Name</label>
+        <input type="text">
+
+        <label>Relationship</label>
+        <input type="text">
+
+        <label>Emergency Contact Number</label>
+        <input type="tel">
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" required>
+                I declare that the information provided is true and I agree to follow NGO guidelines.
+            </label>
+        </div>
+
+        <button type="submit">Register as Volunteer</button>
+
+    </form>
+
+    <div class="thankyou" id="msg">
+        🙏 Thank You! <br>
+        You are successfully registered as a Volunteer.
+    </div>
+
+</div>
+
+</body>
+</html>
